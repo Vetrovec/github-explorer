@@ -6,3 +6,14 @@ export async function fetchUser(username) {
   }
   return user;
 }
+
+export async function fetchUserRepos(username) {
+  const response = await fetch(
+    `https://api.github.com/users/${username}/repos`
+  );
+  if (response.status >= 300) {
+    throw Error(user.message);
+  }
+  const repos = await response.json();
+  return repos;
+}
