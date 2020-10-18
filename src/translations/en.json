@@ -10,5 +10,8 @@
   "components.usernameform.inputs.open": "Open profile",
 
   "components.repofilter.inputs.name": "Name",
-  "components.repofilter.inputs.sort": "Sort by stars"
+  "components.repofilter.inputs.sort": "Sort by stars",
+
+  "components.repolist.repo": "Repository",
+  "components.repolist.stars": "Stars"
 }
