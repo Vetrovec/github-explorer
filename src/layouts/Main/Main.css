@@ -43,6 +43,7 @@
 }
 
 .Main .wrapper .container {
+  position: relative;
   display: flex;
   overflow: hidden;
   width: 100%;
