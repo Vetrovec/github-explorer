@@ -6,6 +6,7 @@ import { IntlProvider } from "react-intl";
 import { Router } from "@reach/router";
 import createStore from "./createStore";
 import Translations from "./translations";
+import Profile from "./containers/Profile";
 
 const store = createStore();
 
@@ -19,7 +20,9 @@ function App() {
             defaultTitle="GitHub Explorer"
           />
           <div className="App">
-            <Router />
+            <Router>
+              <Profile default />
+            </Router>
           </div>
         </IntlProvider>
       </Provider>
