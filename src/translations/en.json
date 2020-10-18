@@ -6,6 +6,9 @@
   "containers.profile.errors.default": "Error while fetching the user",
   "containers.profile.errors.notfound": "User does not exist",
 
+  "containers.repos.errors.default": "Error while fetching repos",
+  "containers.repos.errors.notfound": "User does not exist",
+
   "components.usernameform.inputs.username": "Username",
   "components.usernameform.inputs.open": "Open profile",
 

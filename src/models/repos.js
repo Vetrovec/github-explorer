@@ -35,8 +35,8 @@ export default createModel()({
         if (e.message === "Not Found") {
           errorMessage = "containers.repos.errors.notfound";
         }
-        dispatch.profile.SET_REPOS(null);
-        dispatch.profile.SET_ERROR(errorMessage);
+        dispatch.repos.SET_REPOS(null);
+        dispatch.repos.SET_ERROR(errorMessage);
       }
     },
   }),
