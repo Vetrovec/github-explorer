@@ -7,5 +7,8 @@
   "containers.profile.errors.notfound": "User does not exist",
 
   "components.usernameform.inputs.username": "Username",
-  "components.usernameform.inputs.open": "Open profile"
+  "components.usernameform.inputs.open": "Open profile",
+
+  "components.repofilter.inputs.name": "Name",
+  "components.repofilter.inputs.sort": "Sort by stars"
 }
