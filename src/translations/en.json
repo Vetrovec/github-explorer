@@ -1,3 +1,5 @@
 {
-  "containers.profile.title": "Profile"
+  "containers.profile.title": "Profile",
+  "containers.profile.errors.default": "Error while fetching the user",
+  "containers.profile.errors.notfound": "User does not exist"
 }
