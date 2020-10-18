@@ -1,14 +1,20 @@
 import "./Main.css";
 import React from "react";
 import PropTypes from "prop-types";
+import { Helmet } from "react-helmet-async";
+import { FormattedMessage, useIntl } from "react-intl";
 import AnimationLoading from "components/AnimationLoading";
 
 function MainLayout({ title, loading, children }) {
+  const { messages } = useIntl();
   return (
     <div className="Main">
+      <Helmet title={messages[title]} />
       <div className="wrapper">
         <div className="title">
-          <h1>{title}</h1>
+          <h1>
+            <FormattedMessage id={title} />
+          </h1>
         </div>
         {loading ? (
           <div className="loading-container">

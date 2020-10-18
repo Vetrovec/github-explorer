@@ -1,5 +1,11 @@
 {
   "containers.profile.title": "Profile",
+  "containers.profile.validation.required": "Required",
+  "containers.profile.validation.maxlength": "Username Too Long",
+  "containers.profile.validation.characters": "Contains Invalid Characters",
   "containers.profile.errors.default": "Error while fetching the user",
-  "containers.profile.errors.notfound": "User does not exist"
+  "containers.profile.errors.notfound": "User does not exist",
+
+  "components.usernameform.inputs.username": "Username",
+  "components.usernameform.inputs.open": "Open profile"
 }

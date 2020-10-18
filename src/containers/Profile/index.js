@@ -1,15 +1,11 @@
 import React from "react";
-import { Helmet } from "react-helmet-async";
-import { useIntl } from "react-intl";
 import MainLayout from "layouts/Main";
+import UsernameForm from "components/UsernameForm";
 
 function Profile() {
-  const intl = useIntl();
   return (
-    <MainLayout title={intl.messages["containers.profile.title"]}>
-      <Helmet>
-        <title>{intl.messages["containers.profile.title"]}</title>
-      </Helmet>
+    <MainLayout title={"containers.profile.title"}>
+      <UsernameForm onSubmit={() => null} />
     </MainLayout>
   );
 }

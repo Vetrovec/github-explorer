@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { FormattedMessage } from "react-intl";
 import { ErrorMessage as FormikErrorMessage, Field, Formik } from "formik";
 import * as Yup from "yup";
 import { Form, FormFooter, Label, LabelContent, LabelText } from "./elements";
@@ -28,13 +29,17 @@ function UsernameForm({ onSubmit }) {
         >
           <Label>
             <LabelContent>
-              <LabelText>Username</LabelText>
+              <LabelText>
+                <FormattedMessage id="components.usernameform.inputs.username" />
+              </LabelText>
               <FormikErrorMessage name="username" component={ErrorMessage} />
             </LabelContent>
             <Field id="username" name="username" as={TextInput} />
           </Label>
           <FormFooter>
-            <Button type="submit">Show</Button>
+            <Button type="submit">
+              <FormattedMessage id="components.usernameform.inputs.open" />
+            </Button>
           </FormFooter>
         </Form>
       )}

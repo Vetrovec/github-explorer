@@ -6,10 +6,7 @@ import { Message } from "./elements";
 function ErrorMessage({ children }) {
   return (
     <Message>
-      <FormattedMessage
-        id={children.toString()}
-        defaultMessage="Unknown error"
-      />
+      <FormattedMessage id={children.toString()} />
     </Message>
   );
 }
