@@ -2,14 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { ErrorMessage as FormikErrorMessage, Field, Formik } from "formik";
 import * as Yup from "yup";
-import {
-  Error,
-  Form,
-  FormFooter,
-  Label,
-  LabelContent,
-  LabelText,
-} from "./elements";
+import { Form, FormFooter, Label, LabelContent, LabelText } from "./elements";
 import ErrorMessage from "components/ErrorMessage";
 import { Button, TextInput } from "components/Inputs";
 
