@@ -1,0 +1,11 @@
+{
+  "plugins": ["stylelint-order"],
+  "processors": [["stylelint-processor-styled-components", {
+    "ignoreFiles": ["**/*.css"]
+  }]],
+  "extends": [
+    "stylelint-config-recommended",
+    "stylelint-config-idiomatic-order",
+    "stylelint-config-styled-components"
+  ]
+}
