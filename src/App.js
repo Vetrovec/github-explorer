@@ -1,4 +1,3 @@
-import "./App.css";
 import React from "react";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { Provider } from "react-redux";
@@ -19,11 +18,9 @@ function App() {
             titleTemplate="GitHub Explorer - %s"
             defaultTitle="GitHub Explorer"
           />
-          <div className="App">
-            <Router>
-              <Profile default />
-            </Router>
-          </div>
+          <Router>
+            <Profile default />
+          </Router>
         </IntlProvider>
       </Provider>
     </HelmetProvider>

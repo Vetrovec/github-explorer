@@ -1,16 +1,16 @@
 import React from "react";
 import { Helmet } from "react-helmet-async";
 import { useIntl } from "react-intl";
+import MainLayout from "layouts/Main";
 
 function Profile() {
   const intl = useIntl();
   return (
-    <div>
+    <MainLayout title={intl.messages["containers.profile.title"]}>
       <Helmet>
         <title>{intl.messages["containers.profile.title"]}</title>
       </Helmet>
-      <h1>{intl.messages["containers.profile.title"]}</h1>
-    </div>
+    </MainLayout>
   );
 }
 
