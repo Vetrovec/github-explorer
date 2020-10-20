@@ -1,28 +1,22 @@
-export async function fetchUser(username) {
-  const response = await fetch("https://api.github.com/users/" + username);
-  const user = await response.json();
+const baseUrl = "https://api.github.com";
+
+async function apiFetch(url, options) {
+  const response = await fetch(baseUrl + url, options);
+  const data = await response.json();
   if (response.status >= 300) {
-    throw Error(user.message);
+    throw Error(data.message);
   }
-  return user;
+  return data;
 }
 
-export async function fetchUserRepos(username) {
-  const response = await fetch(
-    `https://api.github.com/users/${username}/repos`
-  );
-  const repos = await response.json();
-  if (response.status >= 300) {
-    throw Error(repos.message);
-  }
-  return repos;
+export function fetchUser(username) {
+  return apiFetch(`/users/${username}`);
 }
 
-export async function fetchRepo(owner, repo) {
-  const response = await fetch(`https://api.github.com/repos/${owner}/${repo}`);
-  const repos = await response.json();
-  if (response.status >= 300) {
-    throw Error(repos.message);
-  }
-  return repos;
+export function fetchUserRepos(username) {
+  return apiFetch(`/users/${username}/repos`);
+}
+
+export function fetchRepo(owner, repo) {
+  return apiFetch(`/repos/${owner}/${repo}`);
 }
