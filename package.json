@@ -45,9 +45,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "npm run lint:js && npm run lint:css",
     "lint:js": "eslint .",
-    "lint:css": "stylelint 'src/**/*.{js,jsx}'"
+    "lint:css": "stylelint 'src/**/*.{css,js,jsx}'",
+    "lint": "npm run lint:js && npm run lint:css"
   },
   "husky": {
     "hooks": {
