@@ -8,6 +8,7 @@ import RepoFilter from "components/RepoFilter";
 import RepoList from "components/RepoList";
 
 function Repos({ username }) {
+  const [owner, setOwner] = useState(null);
   const [filterName, setFilterName] = useState("");
   const [filterSortStars, setFilterSortStars] = useState(false);
   const dispatch = useDispatch();
@@ -16,12 +17,13 @@ function Repos({ username }) {
     (state) => state.loading.effects.repos.fetchRepos
   );
   const repos = useSelector((state) => state.repos.repos, shallowEqual);
-  const shouldFetch = !loading && !repos && !error;
+  const shouldFetch = !loading && !error && (!repos || owner !== username);
   useEffect(() => {
     if (shouldFetch) {
       dispatch.repos.fetchRepos(username);
+      setOwner(username);
     }
-  }, [dispatch, username, shouldFetch]);
+  }, [dispatch, setOwner, username, shouldFetch]);
   const mappedRepos =
     Array.isArray(repos) &&
     repos
