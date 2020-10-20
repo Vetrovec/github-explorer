@@ -17,6 +17,11 @@
 
   "components.repoinfo.content.nodescription": "No description provided",
 
+  "components.repodetails.content.language": "Language",
+  "components.repodetails.content.license": "License",
+  "components.repodetails.content.forked": "Forked",
+  "components.repodetails.content.parent": "Parent",
+
   "components.usernameform.inputs.username": "Username",
   "components.usernameform.inputs.open": "Open profile",
 
