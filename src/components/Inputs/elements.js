@@ -1,13 +1,15 @@
 import styled from "styled-components";
 
 export const Button = styled.button`
-  min-width: 140px;
+  min-width: 120px;
   height: 30px;
+  padding: 0 8px;
   border: none;
   background-color: #fc5c54;
   border-radius: 15px;
   color: white;
   cursor: pointer;
+  text-transform: uppercase;
   &:focus {
     outline: none;
   }

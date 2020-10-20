@@ -5,6 +5,7 @@ import {
   Body,
   Header,
   RepoDataCell,
+  RepoHeaderCell,
   RepoLink,
   StarDataCell,
   StarHeaderCell,
@@ -16,9 +17,9 @@ function RepoList({ onRepo, repos }) {
     <Table>
       <Header>
         <tr>
-          <td>
+          <RepoHeaderCell>
             <FormattedMessage id="components.repolist.repo" />
-          </td>
+          </RepoHeaderCell>
           <StarHeaderCell>
             <FormattedMessage id="components.repolist.stars" />
           </StarHeaderCell>

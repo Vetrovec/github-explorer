@@ -20,7 +20,7 @@ function App() {
             titleTemplate="GitHub Explorer - %s"
             defaultTitle="GitHub Explorer"
           />
-          <Router>
+          <Router style={{ height: "100%", outline: "none" }}>
             <Profile default />
             <Repos path="/repos/:username" />
             <Details path="/details/:username/:repo" />

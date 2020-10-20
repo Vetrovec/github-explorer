@@ -16,6 +16,10 @@ export const RepoDataCell = styled.td`
   white-space: nowrap;
 `;
 
+export const RepoHeaderCell = styled.td`
+  width: 80%;
+`;
+
 export const RepoLink = styled.a`
   color: #000;
   cursor: pointer;
@@ -34,6 +38,7 @@ export const StarDataCell = styled.td`
 `;
 
 export const StarHeaderCell = styled.th`
+  width: 20%;
   text-align: center;
 `;
 

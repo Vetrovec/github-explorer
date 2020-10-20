@@ -14,8 +14,8 @@ export const ErrorBox = styled.p`
 
 export const ProfileContainer = styled.div`
   display: flex;
-  width: 75%;
-  max-width: 75%;
+  width: 350px;
+  max-width: 100%;
   flex-direction: column;
   row-gap: 12px;
 `;
