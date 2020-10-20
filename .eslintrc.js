@@ -1,5 +1,6 @@
 module.exports = {
   extends: [
+    "eslint:recommended",
     "plugin:react/recommended",
     "plugin:react-hooks/recommended",
     "plugin:prettier/recommended",
@@ -7,7 +8,7 @@ module.exports = {
   ],
   env: {
     es6: true,
-    node: false,
+    node: true,
     browser: true,
   },
   parserOptions: {
