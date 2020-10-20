@@ -25,7 +25,6 @@ export default createModel()({
           id: repo.id,
           name: repo.name,
           fullName: repo.full_name,
-          description: repo.description,
           stars: repo.stargazers_count,
         }));
         dispatch.repos.SET_REPOS(repos);

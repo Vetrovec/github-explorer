@@ -52,7 +52,6 @@ RepoList.propTypes = {
     PropTypes.shape({
       id: PropTypes.number.isRequired,
       name: PropTypes.string.isRequired,
-      description: PropTypes.string,
       stars: PropTypes.number.isRequired,
     }).isRequired
   ).isRequired,

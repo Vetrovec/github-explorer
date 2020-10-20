@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "@reach/router";
 import PropTypes from "prop-types";
 import { useDispatch, useSelector, shallowEqual } from "react-redux";
 import { FormattedMessage } from "react-intl";
@@ -11,6 +12,7 @@ function Repos({ username }) {
   const [owner, setOwner] = useState(null);
   const [filterName, setFilterName] = useState("");
   const [filterSortStars, setFilterSortStars] = useState(false);
+  const navigate = useNavigate();
   const dispatch = useDispatch();
   const error = useSelector((state) => state.repos.error);
   const loading = useSelector(
@@ -36,7 +38,6 @@ function Repos({ username }) {
       .map((repo) => ({
         id: repo.id,
         name: repo.fullName,
-        description: repo.description,
         stars: repo.stars,
       }));
   return (
@@ -54,7 +55,10 @@ function Repos({ username }) {
           />
           <ListContainer>
             <RepoList
-              onRepo={(id) => repos.find((repo) => repo.id === id)}
+              onRepo={(id) => {
+                const repo = repos.find((repo) => repo.id === id);
+                navigate(`/details/${owner}/${repo.name}`);
+              }}
               repos={mappedRepos}
             />
           </ListContainer>
