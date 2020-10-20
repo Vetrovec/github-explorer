@@ -1,18 +1,18 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { FormattedMessage } from "react-intl";
-import { Message } from "./elements";
 
-function ErrorMessage({ children }) {
+function ErrorMessage({ children, className }) {
   return (
-    <Message>
+    <span className={className}>
       <FormattedMessage id={children.toString()} />
-    </Message>
+    </span>
   );
 }
 
 ErrorMessage.propTypes = {
   children: PropTypes.string.isRequired,
+  className: PropTypes.string,
 };
 
 export default ErrorMessage;
