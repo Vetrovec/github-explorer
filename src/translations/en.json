@@ -10,6 +10,9 @@
   "containers.repos.errors.default": "Error while fetching repos",
   "containers.repos.errors.notfound": "User does not exist",
 
+  "components.profilenav.inputs.close": "Close",
+  "components.profilenav.inputs.open": "Open",
+
   "components.usernameform.inputs.username": "Username",
   "components.usernameform.inputs.open": "Open profile",
 
