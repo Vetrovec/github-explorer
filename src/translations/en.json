@@ -6,6 +6,7 @@
   "containers.profile.errors.default": "Error while fetching the user",
   "containers.profile.errors.notfound": "User does not exist",
 
+  "containers.repos.title": "Repositories",
   "containers.repos.errors.default": "Error while fetching repos",
   "containers.repos.errors.notfound": "User does not exist",
 

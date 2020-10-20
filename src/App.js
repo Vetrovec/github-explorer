@@ -6,6 +6,7 @@ import { Router } from "@reach/router";
 import createStore from "./createStore";
 import Translations from "./translations";
 import Profile from "./containers/Profile";
+import Repos from "containers/Repos";
 
 const store = createStore();
 
@@ -20,6 +21,7 @@ function App() {
           />
           <Router>
             <Profile default />
+            <Repos path="/repos/:username" />
           </Router>
         </IntlProvider>
       </Provider>
