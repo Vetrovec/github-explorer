@@ -5,7 +5,8 @@ import { IntlProvider } from "react-intl";
 import { Router } from "@reach/router";
 import createStore from "./createStore";
 import Translations from "./translations";
-import Profile from "./containers/Profile";
+import Details from "containers/Details";
+import Profile from "containers/Profile";
 import Repos from "containers/Repos";
 
 const store = createStore();
@@ -22,6 +23,7 @@ function App() {
           <Router>
             <Profile default />
             <Repos path="/repos/:username" />
+            <Details path="/details/:username/:repo" />
           </Router>
         </IntlProvider>
       </Provider>

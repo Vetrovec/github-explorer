@@ -17,3 +17,12 @@ export async function fetchUserRepos(username) {
   }
   return repos;
 }
+
+export async function fetchRepo(owner, repo) {
+  const response = await fetch(`https://api.github.com/repos/${owner}/${repo}`);
+  const repos = await response.json();
+  if (response.status >= 300) {
+    throw Error(repos.message);
+  }
+  return repos;
+}

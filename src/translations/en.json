@@ -11,6 +11,8 @@
   "containers.repos.errors.notfound": "User does not exist",
 
   "containers.details.title": "Details",
+  "containers.details.errors.default": "Error while fetching repo details",
+  "containers.details.errors.notfound": "Repo does not exist",
 
   "components.profilenav.inputs.close": "Close",
   "components.profilenav.inputs.open": "Open",
