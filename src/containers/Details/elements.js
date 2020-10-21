@@ -7,8 +7,8 @@ export const ErrorMessage = styled.p`
 export const DetailContainer = styled.div`
   display: flex;
   width: 100%;
-  height: 100%;
   flex-direction: column;
+  flex-grow: 1;
   justify-content: space-between;
   row-gap: 16px;
 `;

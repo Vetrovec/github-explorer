@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import ErrorMessage from "components/ErrorMessage";
 
 export const Label = styled.label`
   display: flex;
@@ -8,7 +7,7 @@ export const Label = styled.label`
   margin-bottom: 8px;
 `;
 
-export const ErrorBox = styled(ErrorMessage)`
+export const ErrorBox = styled.span`
   display: block;
   color: #fc5c54;
   text-align: right;
@@ -27,6 +26,7 @@ export const FormFooter = styled.div`
 export const LabelContent = styled.div`
   display: flex;
   flex-direction: row;
+  align-items: flex-end;
   justify-content: space-between;
   padding: 0 1px;
   margin-bottom: 3px;
