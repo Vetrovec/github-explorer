@@ -6,7 +6,7 @@ export const ErrorMessage = styled.p`
 
 export const ListContainer = styled.div`
   flex-grow: 1;
-  overflow-y: scroll;
+  overflow-y: auto;
 `;
 
 export const ReposContainer = styled.div`

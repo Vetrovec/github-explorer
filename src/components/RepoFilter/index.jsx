@@ -10,6 +10,7 @@ function RepoFilter({ onNameChange, onSortChange }) {
       <Label>
         <FormattedMessage id="components.repofilter.inputs.name" />
         <TextInput
+          autoComplete="off"
           id="repoName"
           name="repoName"
           onChange={(e) => onNameChange(e.target.value)}
