@@ -2,19 +2,23 @@ import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 import { FormattedMessage } from "react-intl";
 import { useDispatch, useSelector, shallowEqual } from "react-redux";
+import { useLocation } from "@reach/router";
+import qs from "qs";
 import { ErrorMessage, DetailContainer } from "./elements";
 import MainLayout from "layouts/Main";
 import RepoDetails from "components/RepoDetails";
 import RepoInfo from "components/RepoInfo";
 
-function Details({ username, repo }) {
+function Details({ username }) {
+  const query = qs.parse(useLocation().search, { ignoreQueryPrefix: true });
+  const { repo } = query;
   const dispatch = useDispatch();
   const error = useSelector((state) => state.details.error);
   const loading = useSelector(
     (state) => state.loading.effects.details.fetchDetails
   );
   const details = useSelector((state) => state.details.details, shallowEqual);
-  const shouldFetch = !error && (!details || details.name !== repo);
+  const shouldFetch = repo && !error && (!details || details.name !== repo);
   useEffect(() => {
     if (shouldFetch) {
       dispatch.details.fetchDetails({ username, repo });
@@ -25,6 +29,11 @@ function Details({ username, repo }) {
       title="containers.details.title"
       loading={shouldFetch || loading}
     >
+      {!repo && (
+        <ErrorMessage>
+          <FormattedMessage id="containers.details.errors.missing" />
+        </ErrorMessage>
+      )}
       {error && (
         <ErrorMessage>
           <FormattedMessage id={error} />

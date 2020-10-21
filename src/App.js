@@ -23,7 +23,7 @@ function App() {
           <Router style={{ height: "100%", outline: "none" }}>
             <Profile default />
             <Repos path="/repos/:username" />
-            <Details path="/details/:username/:repo" />
+            <Details path="/details/:username" />
           </Router>
         </IntlProvider>
       </Provider>

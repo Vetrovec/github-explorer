@@ -12,6 +12,7 @@
 
   "containers.details.title": "Details",
   "containers.details.errors.default": "Error while fetching repo details",
+  "containers.details.errors.missing": "Repo name not provided",
   "containers.details.errors.notfound": "Repo does not exist",
 
   "components.profilenav.inputs.close": "Close",

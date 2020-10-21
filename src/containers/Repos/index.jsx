@@ -57,7 +57,7 @@ function Repos({ username }) {
             <RepoList
               onRepo={(id) => {
                 const repo = repos.find((repo) => repo.id === id);
-                navigate(`/details/${owner}/${repo.name}`);
+                navigate(`/details/${owner}?repo=${repo.name}`);
               }}
               repos={mappedRepos}
             />
