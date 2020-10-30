@@ -1,4 +1,4 @@
-# github-explorer
+# github-explorer
 
 Small web application powered by React and a bunch of other libraries. Only recommended and/or default rules were used for linting and code formatting. This project was created for a job interview.
 
